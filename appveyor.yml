@@ -15,15 +15,16 @@ install:
     - vcpkg update
     - vcpkg install --featurepackages boost-system:x64-windows boost-program-options:x64-windows boost-thread:x64-windows boost-filesystem:x64-windows
 
-before_build:
-    - md build
-    - cd build
-    - cmake -G "Visual Studio 14 2015 Win64" -DPopSift_BUILD_EXAMPLES:BOOL=OFF -DCMAKE_BUILD_TYPE=%configuration% -DCMAKE_TOOLCHAIN_FILE=c:/tools/vcpkg/scripts/buildsystems/vcpkg.cmake ..
-    - ls -l
+#before_build:
+    #- md build
+    #- cd build
+    #- cmake -G "Visual Studio 14 2015 Win64" -DPopSift_BUILD_EXAMPLES:BOOL=OFF -DCMAKE_BUILD_TYPE=%configuration% -DCMAKE_TOOLCHAIN_FILE=c:/tools/vcpkg/scripts/buildsystems/vcpkg.cmake ..
+    #- ls -l
 
-build:
-  project: $(APPVEYOR_BUILD_FOLDER)\build\PopSift.sln
-  parallel: true
+#build:
+  #project: $(APPVEYOR_BUILD_FOLDER)\build\PopSift.sln
+  #parallel: true
 
 cache:
   c:\tools\vcpkg\installed\
+  
