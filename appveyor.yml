@@ -21,7 +21,7 @@ install:
       boost-program-options 
       boost-thread 
       boost-filesystem
-      # cuda
+      cuda
   
 before_build:
     - md build
