@@ -92,11 +92,11 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
   message(STATUS "Building in debug mode")
   set(CUDA_NVCC_FLAGS_DEBUG   "${CUDA_NVCC_FLAGS_DEBUG};-G")
 endif()
-set(CUDA_NVCC_FLAGS_RELEASE "${CUDA_NVCC_FLAGS_RELEASE};-O3")
+# set(CUDA_NVCC_FLAGS_RELEASE "${CUDA_NVCC_FLAGS_RELEASE};-O3")
 
-if(PopSift_USE_POSITION_INDEPENDENT_CODE)
-  set(CUDA_NVCC_FLAGS         "${CUDA_NVCC_FLAGS};-Xcompiler;-fPIC")
-endif()
+# if(PopSift_USE_POSITION_INDEPENDENT_CODE)
+#   set(CUDA_NVCC_FLAGS         "${CUDA_NVCC_FLAGS};-Xcompiler;-fPIC")
+# endif()
 
 #
 # Add all requested CUDA CCs to the command line for offline compilation
