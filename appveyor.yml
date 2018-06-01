@@ -35,5 +35,5 @@ before_build:
 
 cache:
   - c:\tools\vcpkg\installed\
-  - %CUDA_PATH%
+  - c:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.1
   
