@@ -22,7 +22,7 @@ install:
           boost-thread 
           boost-filesystem
           # cuda
-    --triplet %PLATFORM%-windows
+      --triplet %PLATFORM%-windows
   - vcpkg list
 
 before_build:
