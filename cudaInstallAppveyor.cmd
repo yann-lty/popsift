@@ -14,6 +14,9 @@ echo CUDA toolkit 9 installed
 
 dir "%ProgramFiles%"
 
-set PATH=%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin;%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v9.1\libnvvp;%PATH%
+set CUDA_PATH=%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v9.1
+set CUDA_BIN_PATH=%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v9.1\bin
+
+set PATH=%CUDA_BIN_PATH%;%CUDA_PATH%\libnvvp;%PATH%
 
 nvcc -V
