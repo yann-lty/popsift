@@ -57,11 +57,13 @@ endif()
 # Default setting of the CUDA CC versions to compile.
 # Shortening the lists saves a lot of compile time.
 #
-if(CUDA_VERSION_MAJOR GREATER 7)
-  set(PopSift_CUDA_CC_LIST_BASIC 30 35 50 52 60 61 62)
-else()
-  set(PopSift_CUDA_CC_LIST_BASIC 30 35 50 52 )
-endif()
+# if(CUDA_VERSION_MAJOR GREATER 7)
+#  set(PopSift_CUDA_CC_LIST_BASIC 30 35 50 52 60 61 62)
+# else()
+#  set(PopSift_CUDA_CC_LIST_BASIC 30 35 50 52 )
+# endif()
+set(PopSift_CUDA_CC_LIST_BASIC 35 )
+
 set(PopSift_CUDA_CC_LIST ${PopSift_CUDA_CC_LIST_BASIC} CACHE STRING "CUDA CC versions to compile")
 
 if(PopSift_USE_NVTX_PROFILING)
