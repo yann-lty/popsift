@@ -9,19 +9,27 @@ configuration:
   - Release
   # - Debug
 
+environment:
+  APPVEYOR_SAVE_CACHE_ON_ERROR: true
+
 install:
     - cmd: >-
-          call cudaInstallAppveyor.cmd
+        #  call cudaInstallAppveyor.cmd
     - vcpkg update
-    - vcpkg install --featurepackages boost-system:x64-windows boost-program-options:x64-windows boost-thread:x64-windows boost-filesystem:x64-windows
+    - vcpkg install 
+        boost-system 
+        boost-program-options
+        boost-thread 
+        boost-filesystem
+        #cuda
 
-#before_build:
+before_build:
     #- md build
     #- cd build
     #- cmake -G "Visual Studio 14 2015 Win64" -DPopSift_BUILD_EXAMPLES:BOOL=OFF -DCMAKE_BUILD_TYPE=%configuration% -DCMAKE_TOOLCHAIN_FILE=c:/tools/vcpkg/scripts/buildsystems/vcpkg.cmake ..
     #- ls -l
 
-#build:
+build:
   #project: $(APPVEYOR_BUILD_FOLDER)\build\PopSift.sln
   #parallel: true
 
