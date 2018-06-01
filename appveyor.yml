@@ -16,11 +16,7 @@ install:
   - cmd: >-
       call cudaInstallAppveyor.cmd
   - vcpkg update
-  - vcpkg install --triplet %PLATFORM%-windows
-          boost-system 
-          boost-program-options
-          boost-thread 
-          # cuda
+  - vcpkg install --triplet x64-windows boost-system boost-program-options boost-thread # cuda
   
 before_build:
     - md build
