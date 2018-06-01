@@ -93,7 +93,7 @@ endif()
 set(CUDA_NVCC_FLAGS_RELEASE "${CUDA_NVCC_FLAGS_RELEASE};-O3")
 
 if(PopSift_USE_POSITION_INDEPENDENT_CODE)
-  set(CUDA_NVCC_FLAGS         '${CUDA_NVCC_FLAGS};-Xcompiler -fPIC')
+  set(CUDA_NVCC_FLAGS         '${CUDA_NVCC_FLAGS};-Xcompiler;-fPIC')
 endif()
 
 #
