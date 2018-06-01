@@ -35,5 +35,5 @@ before_build:
 
 cache:
   - c:\tools\vcpkg\installed\
-  # - %CUDA_PATH%
+  - %CUDA_PATH%
   
