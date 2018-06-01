@@ -13,15 +13,17 @@ environment:
   APPVEYOR_SAVE_CACHE_ON_ERROR: true
 
 install:
-    - cmd: >-
-        call cudaInstallAppveyor.cmd
-    - vcpkg update
-    - vcpkg install 
-        boost-system 
-        boost-program-options
-        boost-thread 
-        boost-filesystem
-        cuda
+  - cmd: >-
+      call cudaInstallAppveyor.cmd
+  - vcpkg update
+  - vcpkg install 
+          boost-system 
+          boost-program-options
+          boost-thread 
+          boost-filesystem
+          # cuda
+    --triplet %PLATFORM%-windows
+  - vcpkg list
 
 before_build:
     - md build
@@ -34,5 +36,6 @@ before_build:
   #parallel: true
 
 cache:
-  c:\tools\vcpkg\installed\
+  - c:\tools\vcpkg\installed\
+  - %CUDA_PATH%
   
