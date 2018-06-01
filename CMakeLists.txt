@@ -53,6 +53,7 @@ if(NOT CUDA_FOUND)
   message(FATAL_ERROR "Could not find CUDA >= 7.0")
 endif()
 
+set(CUDA_PROPAGATE_HOST_FLAGS OFF)
 #
 # Default setting of the CUDA CC versions to compile.
 # Shortening the lists saves a lot of compile time.
