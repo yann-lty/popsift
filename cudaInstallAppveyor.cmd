@@ -1,6 +1,5 @@
 @echo off
 echo Downloading CUDA toolkit 9
-https://developer.nvidia.com/compute/cuda/9.2/Prod/local_installers/cuda_9.2.88_win10
 appveyor DownloadFile  https://developer.nvidia.com/compute/cuda/9.2/Prod/local_installers/cuda_9.2.88_win10 -FileName cuda_9.2.88_win10.exe
 dir
 echo Installing CUDA toolkit 9
