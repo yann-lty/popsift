@@ -21,15 +21,15 @@ install:
         boost-program-options
         boost-thread 
         boost-filesystem
-        #cuda
+        cuda
 
 before_build:
-    #- md build
-    #- cd build
+    - md build
+    - cd build
     #- cmake -G "Visual Studio 14 2015 Win64" -DPopSift_BUILD_EXAMPLES:BOOL=OFF -DCMAKE_BUILD_TYPE=%configuration% -DCMAKE_TOOLCHAIN_FILE=c:/tools/vcpkg/scripts/buildsystems/vcpkg.cmake ..
     #- ls -l
 
-build:
+# build:
   #project: $(APPVEYOR_BUILD_FOLDER)\build\PopSift.sln
   #parallel: true
 
