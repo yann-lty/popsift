@@ -20,11 +20,10 @@ install:
           boost-system 
           boost-program-options
           boost-thread 
-          boost-filesystem
           # cuda
+          boost-filesystem
       --triplet %PLATFORM%-windows
-  - vcpkg list
-
+  
 before_build:
     - md build
     - cd build
